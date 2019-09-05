@@ -37,6 +37,7 @@
         </div>
     </div>
     <script>
+        alert("hello");
         function addBasket(urun_id,btn_elm) {
             $.post("/addbasket?id="+urun_id,{quantity:1},function (json) {
                 data = JSON.parse(json);
