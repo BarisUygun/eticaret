@@ -151,7 +151,7 @@
         }
         #menu-oge:visited{
             background-color: rgb(50,50,50);
-            border-color:white;
+            border-color:rgb(255,255,255);
         }
     </style>
 
@@ -169,8 +169,8 @@
 
                             <li>
                                 <div class="dropdown" style="background-color: rgb(0,0,0)">
-                                    <a style="background-color: rgb(0,0,0);color:white" class="btn btn-secondary dropdown-toggle" type="" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <i style="color:white" class="fa fa-user"></i> Hesabım
+                                    <a style="background-color: rgb(0,0,0);color:rgb(255,255,255)" class="btn btn-secondary dropdown-toggle" type="" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i style="color:rgb(255,255,255)" class="fa fa-user"></i> Hesabım
                                     </a>
                                     <div  class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                         <a  href="profile" class="dropdown-item">Profil</a>
@@ -180,14 +180,14 @@
                                 </div>
 
 
-                            <li><a style="color:white" href="/cart"><i class="fa fa-user"></i> Sepetim</a></li>
-                            <li><a style="color:white" href="/siparislerim"><i class="fa fa-user"></i> Siparişlerim</a></li>
-                            <li><a style="color:white" href="/logout"><i class="fa fa-user"></i> Çıkış</a></li>
+                            <li><a style="color:rgb(255,255,255)" href="/cart"><i class="fa fa-user"></i> Sepetim</a></li>
+                            <li><a style="color:rgb(255,255,255)" href="/siparislerim"><i class="fa fa-user"></i> Siparişlerim</a></li>
+                            <li><a style="color:rgb(255,255,255)" href="/logout"><i class="fa fa-user"></i> Çıkış</a></li>
 
                             <?php
                         }
                         else { ?>
-                            <li><a style="color:white" href="/login"><i class="fa fa-user"></i> Giriş</a></li>
+                            <li><a style="color:rgb(255,255,255)" href="/login"><i class="fa fa-user"></i> Giriş</a></li>
 
                             <?php
                         }
@@ -202,8 +202,8 @@
                 <div class="header-right">
                     <ul class="list-unstyled list-inline">
                         <li class="dropdown dropdown-small">
-                            <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" href="#"><span style="color:white" class="key">currency :</span><span style="color:white" class="value">USD </span><b style="color:white" class="caret"></b></a>
-                            <ul class="dropdown-menu" style="color:white">
+                            <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" href="#"><span style="color:rgb(255,255,255)" class="key">currency :</span><span style="color:rgb(255,255,255)" class="value">USD </span><b style="color:rgb(255,255,255)" class="caret"></b></a>
+                            <ul class="dropdown-menu" style="color:rgb(255,255,255)">
                                 <li ><a href="#">USD</a></li>
                                 <li><a href="#">INR</a></li>
                                 <li><a href="#">GBP</a></li>
@@ -211,8 +211,8 @@
                         </li>
 
                         <li class="dropdown dropdown-small">
-                            <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" href="#"><span style="color:white" class="key">language :</span><span style="color:white" class="value">English </span><b style="color:white" class="caret"></b></a>
-                            <ul class="dropdown-menu" style="color:white">
+                            <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" href="#"><span style="color:rgb(255,255,255)" class="key">language :</span><span style="color:rgb(255,255,255)" class="value">English </span><b style="color:rgb(255,255,255)" class="caret"></b></a>
+                            <ul class="dropdown-menu" style="color:rgb(255,255,255)">
                                 <li><a href="#">English</a></li>
                                 <li><a href="#">French</a></li>
                                 <li><a href="#">German</a></li>
@@ -238,7 +238,7 @@
 
             <div class="col-sm-6">
                 <div class="shopping-item" style="margin: 25px;">
-                    <a style="color: white" id="cart_top" href="/cart">Sepet - <span style="color: white" class="cart-amunt"><?php  echo $_SESSION['total_price'];  ?> ₺</span>
+                    <a style="color: rgb(255,255,255)" id="cart_top" href="/cart">Sepet - <span style="color: rgb(255,255,255)" class="cart-amunt"><?php  echo $_SESSION['total_price'];  ?> ₺</span>
                         <i class="fa fa-shopping-cart"></i> <span class="product-count">
                             <?php echo $_SESSION['total_product']; ?>
                         </span>
@@ -264,14 +264,14 @@
             </div>
             <div class="navbar-collapse collapse" style="background-color:black;">
                 <ul class="nav nav-tabs">
-                    <li><a id="menu-oge" style="color:white" href="/">Ana Sayfa</a></li>
+                    <li><a id="menu-oge" style="color:rgb(255,255,255)" href="/">Ana Sayfa</a></li>
                     <li class="nav-item dropdown">
-                        <a id="menu-oge"  style="color:white" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a id="menu-oge"  style="color:rgb(255,255,255)" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Kategoriler
                         </a>
                         <div id="menu-oge" style="background-color: rgb(70,70,70);" class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <?php foreach (Kategoriler::getAll() AS $header_kategori){?>
-                                <a style="    color: white;
+                                <a style="    color: rgb(255,255,255);
     width: 100%;
     display: block;
     padding: 5px 10px;" class="dropdown-item" href="/category/<?php echo $header_kategori['slug']?>"><?php echo $header_kategori['name']?></a>
@@ -279,12 +279,39 @@
                             <?php }?>
                         </div>
                     </li>
-                    <li><a id="menu-oge" style="color:white"  href="/iletisim">İletişim</a></li>
+                    <li><a id="menu-oge" style="color:rgb(255,255,255)"  href="/iletisim">İletişim</a></li>
+
+                    <li style="margin-left: 20px">
+                        <div >
+                            <form style="display: inline">
+                            <div >
+                                <input id="arama" name="search_parameter" minlength="3" style="color: rgb(255,255,255);background-color: rgb(0,0,0)" type="text" placeholder="Ara">
+                                <a id="search" style="color: rgb(255,255,255);background-color: transparent" class="btn btn-primary">Ara</a>
+                            </div>
+                            </form>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </div>
     </div>
 </div> <!-- End mainmenu area -->
+
+
+<script>
+
+    $(document).ready(function() {
+        $("#search").click(function() {
+            var search=document.getElementById("arama");
+            var parameter=search.value;
+            var link="/search?id="+parameter;
+            var btn = document.getElementById("search").href=link;
+
+
+        });
+    });
+
+</script>
 
 
 
