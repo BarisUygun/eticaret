@@ -11,6 +11,16 @@ class Urunler
     public $price;
     public $kategori;
 
+    public static function searchProduct($search_parameter)
+    {//TODO:SQL INJECTION
+        $search_parameter="%".$search_parameter."%";
+         $con = DB::getConnection();
+        $sql = "SELECT * FROM urunler WHERE name like ? order by kategori_id DESC";
+        $statement = $con->prepare($sql);
+        $statement->execute([$search_parameter]);
+        return $statement->fetchAll(PDO::FETCH_ASSOC);
+    }
+
     public static function getBySlug($slug)
     {
         $con = DB::getConnection();
