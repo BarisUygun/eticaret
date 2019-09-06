@@ -11,7 +11,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="latest-product">
-                    <h2 class="section-title" style="padding-top: 50px"><?echo $search_parameter?></h2>
+                    <h2 class="section-title" style="padding-top: 50px"><?php echo $search_parameter;?></h2>
                     <?php foreach($liste as $urun) {
                         ?>
                         <div class="single-product" style="float: left;margin-top: 20px">
